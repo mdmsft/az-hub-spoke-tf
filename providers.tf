@@ -16,8 +16,16 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = var.subscription_id
+  alias           = "hub"
   tenant_id       = var.tenant_id
+  subscription_id = var.hub_subscription_id
+}
+
+provider "azurerm" {
+  features {}
+  alias           = "spoke"
+  tenant_id       = var.tenant_id
+  subscription_id = var.spoke_subscription_id
 }
 
 provider "azuread" {

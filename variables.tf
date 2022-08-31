@@ -23,6 +23,10 @@ variable "tenant_id" {
   type = string
 }
 
-variable "subscription_id" {
+variable "hub_subscription_id" {
+  type = string
+}
+
+variable "spoke_subscription_id" {
   type = string
 }
